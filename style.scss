@@ -1,0 +1,35 @@
+@mixin toAll() {
+    box-sizing: border-box;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+$bgColor1: rgb(79, 2, 129);
+$bgColor2: rgb(102, 0, 0);
+
+*{
+    padding: 0;
+    margin: 0;
+    body{
+        @include toAll;
+        #all{
+            @include toAll();
+            margin: 0 30px;
+            #template{
+                background-color: $bgColor1;
+                padding: 20px 40px;
+            }
+            .added{
+                margin-top: 20px;
+                padding: 20px 40px;
+            }
+            .added:nth-of-type(odd){
+                background-color: $bgColor2;
+            }
+            .added:nth-of-type(even){
+                background-color: $bgColor1;
+            }
+        }
+    }
+}
+

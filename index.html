@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="style.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="all">
+			<div id="template">
+				<label id="lab16"><b>Connection Monitor Mode:</b></label>
+				<br/>
+				<input id="full" name="mnMd" type="radio" value="fullStack" onchange="setDisables()" style="width:5%; margin-bottom:0px">
+				<label for="full" id="labfull">Require full TCP/HTTPS Success</label>
+				<br/>
+				<input id='mnMd' name='mnMd' maxlength='26' value='Only Monitor Using Ping' onchange="setDisables()" type="radio" style="width:5%; margin-bottom:0px">
+				<label for="mnMd" id="labmnMd">Only Monitor Using Ping</label>
+							<br/>
+							<input id='kc' name='mnMd' maxlength='26' value='KC' onchange="setDisables()" type="radio" checked style="width:5%; margin-bottom:10px">
+							<label for="kc" id="labkc">Keep Connect HTTPS Roundtrip</label>
+							<br/>
+							<label id="lsockt">Failure Timeout (seconds)</label>
+							<br/>
+							<input id='sockt' name='sockt' maxlength='3' value='20' type="number" min="1" max="250" style="width:95%">
+							<br>
+							<br>
+							<label id="lab1">Target Test Domain</label>
+							<br/>
+							<input id='ts1' name='ts1' maxlength='38' value='www.google.com' style="width:95%">
+							<br>
+							<br>
+							<label id="lablp">Qty to loop this instance</label>
+							<br/>
+							<input id='lp' name='lp' maxlength='3' value='0' type="number" min="1" max="250" style="width:95%">
+							<br>
+							<br>
+							<label id="labdel">Delay (In Seconds)</label>
+							<br/>
+							<input id='del' name='del' maxlength='3' value='0' type="number" min="1" max="250" style="width:95%">
+							<br>
+							<br>
+							<label id="lablp2">Qty of Loops Back to Intial Instance</label>
+							<br/>
+							<input id='lp2' name='lp2' maxlength='3' value='0' type="number" min="1" max="250" style="width:95%">
+					<br>
+				
+
+				<button href="javascript:void(0)" onClick="removeInput(this);">REMOVE THIS FORM</button>	
+			</div>
+
+			<div id="add_more"></div>
+			<button href="javascript:void(0)" onClick="addInput('template', 'add_more');msg()" id="add_more_text">ADD</button>
+
+			<button type="submit" onclick="refreshPage();">SUBMIT</button>
+			<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>	
+		</div>
+
+	
+		<script src="add_form.js">
+			//Form cloning button js code file
+		</script>
+
+		<script src="alert.js">
+			//From cloned message button js code file
+		</script>
+
+		<script src="submitRefresh.js">
+			//Submit & Refresh the page button js code file
+		</script> 
+
+		<script src="backToTop.js">
+			//Top the top button js code file
+		</script>
+
+	</body>
+</html
